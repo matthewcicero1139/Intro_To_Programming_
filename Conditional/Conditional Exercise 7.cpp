@@ -1,3 +1,4 @@
+// Make program say how many days in a month.
 #include <iostream>
 int main()
 {
