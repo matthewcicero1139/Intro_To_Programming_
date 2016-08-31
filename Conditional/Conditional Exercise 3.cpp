@@ -1,4 +1,6 @@
-// Working better than what I had before.
+// Not Working.
+
+// it now is doing more of what it is supposed to but not exactly
 
 #include <iostream>
 int main()
