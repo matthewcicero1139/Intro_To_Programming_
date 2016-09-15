@@ -1,6 +1,6 @@
 // 9/15/16
 
-// not finished still working on it
+
 
 /* Create a function that takes in three numbers and 
 returns the sum of these numbers multiplied by 5.
