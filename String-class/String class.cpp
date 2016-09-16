@@ -6,11 +6,21 @@ class String
 {
 public:
 	String() {};
-	String(char s) {};
+	String(char s) {
+		char ria[10] = "irish"; 
+
+/*		char ria[10] = "irish";
+		strlen(ria);
+		int ish = strlen(ria);
+	//cannot return value from inside constructor
+	//	return ish;
+		*/
+	};
 
 private:
+	// use these to make conversion?
 	int m_cic;
-	char m_k[10];
+	char m_a[10];
 
 };
 
@@ -31,25 +41,31 @@ int main()
 	//	return ish;
 	//}
 
-	//access a character in a certain index within the string class
+	/*how to make a conversion from string and int?*/
+
+	String a = String('d');
+	strlen(a);
+	int ish = strlen(a);
+	return ish;
+	
 
 
+	
+
+	//no conversion from string to int.
+	//return ish;
 
 
-
-
-
-
-
+/* how mr matthew explained classes
 
 	String abc = String();
 	String abcwithchar = String('f');
 	char d;
 	
-	int b;
+	int b; */
 }
-
-int func()
-{
-
-}
+//
+//int func()
+//{
+//
+//}
