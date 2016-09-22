@@ -1,60 +1,109 @@
-/*Of the 4 I was able to setup only 1 is working if that is even working. The others I dont know how to setup at all*/
-
-/* idk what im doing wrong. This is all that I can come up with.
-Ive tried commenting the things that are giving me trouble and
-what I think is wrong with the code but idk how to fix them.
-Ive used books and youtube and, though they have helped me
-understand more, I am still unable to figure out why some 
-things are wrong.*/
-
-// dont have a header file and dont know what to put inside header file
-//dont know how to access certain index within string class
-
 
 #include <iostream>
+#include "StringHeader.h"
+struct a
+{
+	MyString a;
+	char b;
 
-//made a class called MyString
+};
+
 class MyString
 {
-	//made a function inside that is public
-public:
-	/*function with type char called queryLength with no parameters
-	*changed to char from class name and red disappeared so i kept it like that*
-	function asks the strings length and returns the value*/
-	char queryLength()
-	{
-		/* not understanding why char gets rid of red and class name "MyString" makes red appear*/
-		char ria[10] = { "ireland" };
-		strlen(ria);
-		//printing for my own use should be deleted
-		std::cout << ria;
-		system("pause");
-		//returning the value of char array ria
-		return strlen(ria);
+	
+	// declaring functions
+	// should be in header file but when put here clears error\
+	"no suitable constructor exists to conver from "size_t" to "MyString"
 
+	MyString queryLength();
+	MyString equals(MyString a, MyString b);
+	MyString append(MyString a, MyString b);
+	MyString prepend(MyString a, MyString b);
+
+public:
+
+	// Function trying to query the strings length and return an integer.
+// Never took out strlen and made it out of my own functions which was not part of the assessment\
+	but even still, I could not get it to work with it. 
+	MyString queryLength()
+	{
+		char ria[] =  "ireland";
+		strlen(ria);
+		return strlen(ria);
 	}
+
+	// Function trying to compare if the string is the same as another string class
 	MyString equals()
 	{
-		//trying to compare. not sure if how you do it
-		//red is saying no convert from const char to MyString. dont know how to make a conversion constructor.
 		MyString a = MyString("irish");
 		MyString b = MyString("luck");
-		//dont know what it mean to many arguments in function call
-		a.equals(b);
 
-		//trying to append "luck" to end of "irish" should come out as "irish luck"
-		// not working at all. dont know how to actually set up for both append and prepend
-		a.append(b);
-		// trying to prepend "luck" to "irish" should come out as "luck irish"
-		a.prepend(b);
 	}
-	
+
+	// Function trying to append one string to another (Put behind)
+	MyString append(MyString a, MyString b)
+	{
+
+	}
+
+	// Function trying to prepend one string to another (Put infront)
+	MyString prepend(MyString a, MyString b)
+	{
+
+	}
 
 };
 
 int main()
 {
-	MyString query;
+	// need to make a function called query that will add/ count all the characters inside of the character\
+	 array which will then return. What do i need to return? return query?\
+	 return query.queryLenght();
+	MyString queryLength;
 	query.queryLength();
 	return 0;
 }
+
+
+/* I know that I have more questions but I cant think of how to word them in a way that would be
+clear right now.*/
+
+// DOCUMENTATION
+
+// 1. Description: I do not understand how convert a type into another type using a constructor\
+which is hindering my finishing of many of the problems because it is causing errors that i do not\
+know how to fix.\
+	Name:  Query the strings length, returning an integer
+
+// 2. Description: I do not know how to properly use and call a header file within a class. I also dont\
+know how to identify where stuff inside the header file goes.\
+	Name:  A .h and .cpp file submitted that implements the defined String class as per the\
+specifications in Part 1 of the Assessment Description above, following industry-standard coding techniques
+
+// 3. Description: I do not know how to make a comparison of two strings to see if they are the same.\
+	Name:  The ability to compare if the string is the same as another string class
+
+// 4. Descripton: I do not know how to setup a function that will make an append to a string,\
+ as in I dont know how to begin the set up of how to do it.\
+	Name:  The ability to append one string to another
+
+// 5. Description: I dont know how to set up a function that will prepend a string to another.\
+	Name:  The ability to prepend one string to another
+
+// 6,7,8. Description: I do not know what a substring is exactly. Like what is the definition of a\
+substring and what does it do? how do you use it?\
+  6 Name:	The ability to find a sub-string within the string class\
+  7 Name:	The ability to find a sub-string within the string class, \
+starting from a certain index within the string\
+  8 Name: The ability to replace a sub-string found within the string with a different sub-string\
+
+// 9,10. Desctiption: I do not understand what "constant C-style" and "const char" mean. I understand that \
+char is a variable type but what does "const" do to it?\
+  9 Name:	The ability to return the string as a basic constant C-style string (const char*)\
+ 10 Name:	The ability to set the string to an input C-style string
+
+// 11,12. Description: I do not understand how to make the strings characters uppercase/lowercase.\
+I do know that i need to use a loop to make the duplicates.\
+ 11 Name:	The ability to convert the string to a duplicate containing all uppercase letters\
+ 12 Name:	The ability to convert the string to a duplicate containing all lowercase letters\
+
