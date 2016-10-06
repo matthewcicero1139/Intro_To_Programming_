@@ -8,7 +8,7 @@ class MyString
 public:
 
 	MyString();
-	// use to itterate through shit whatever fuck im tired
+	
 	char myArray[465];
 
 };
